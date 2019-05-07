@@ -1,0 +1,6 @@
+# Load_forecasting.
+Availability of cheap power through alternative means such as energy exchanges and bilateral agreements is resulting in short-term load forecasting gaining importance among industries, residential complexes and corporate buildings.
+Short-term forecasting over an hour or a day requires non-linear predictive models. Machine learning algorithms such as neural networks are inherently non-linear and are suitable for accurate forecasting.
+The input nodes of the neural network has 6 nodes which accept, day of month, day of week and time of day in seconds ( 12:00 am is mapped to 0 seconds), total harmonic distortion in voltage, total harmonic distortion in current and neutral current.
+15,940 instances out of the 21253 available instances are used to train the neural network. With the help of Adam optimizer the mean squared error i.e. the mean of squared difference between the predicted power and the actual power, is reduced .
+To do this, in each iteration, the weight of each line connecting a node to another node in the next layer, is altered till the local minima is obtained in the error function. The model presented trains the network for the 15940 instances data for 10 iterations
