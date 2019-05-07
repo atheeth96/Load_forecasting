@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import tensorflow as tf 
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
-
+# for k means clustering
 import pandas as pd
 
 points_n=200
@@ -54,5 +54,31 @@ with tf.Session() as sess:
 
 plt.scatter(points_value[:,0],points_value[:,1],c=assignment_values,s=50,alpha=0.5)
 plt.plot(centroid_values[:,0],centroid_values[:,1],'kx',markersize=15)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fig, ax1 = plt.subplots(figsize = (10,7))
+for i in [0,1,2]:
+    x=df_daily.temperatureMax.loc[df_daily['cluster']==i]
+    y=df_daily.humidity.loc[df_daily['cluster']==i]
+    s_wind=df_daily.windSpeed.loc[df_daily['cluster']==i]
+    ax1.scatter(x, y,s = st*10,c = df_daily.cluster,label=str(i))
+ax1.set_xlabel('Temperature')
+ax1.set_ylabel('Humidity')
+fig.legend()
 plt.show()
 
