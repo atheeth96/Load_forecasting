@@ -56,21 +56,6 @@ plt.scatter(points_value[:,0],points_value[:,1],c=assignment_values,s=50,alpha=0
 plt.plot(centroid_values[:,0],centroid_values[:,1],'kx',markersize=15)
 plt.show()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 fig, ax1 = plt.subplots(figsize = (10,7))
 for i in [0,1,2]:
     x=df_daily.temperatureMax.loc[df_daily['cluster']==i]
